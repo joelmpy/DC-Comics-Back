@@ -24,15 +24,15 @@ app.get("/hero", (req, res, next) => {
 });
 
 app.get("/hero/:slug", (req, res, next) => {
-  let slug = req.params.slug;
+  let slug = req.params.slug.toLowerCase();
   HeroModel.findOne({
     slug: slug,
   })
     .exec()
     .then(function (reponseName) {
       if (reponseName === null) {
-        res.send("Error is not valid");
-      } else res.json(reponseName);
+        res.status(404).send("Error is not valid");
+      } else res.status(200).json(reponseName);
     });
 });
 
