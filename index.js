@@ -1,12 +1,12 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-
+require('dotenv').config()
 app.use(cors());
 app.use(express.json());
 
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/Dc-comics");
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.lknx0gy.mongodb.net/?retryWrites=true&w=majority`);
 const HeroModel = require("./model/characters");
 
 
