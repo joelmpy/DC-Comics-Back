@@ -11,7 +11,7 @@ const HeroModel = require("./model/characters");
 
 
 
-const port = 8006;
+const port = 5000;
 
 app.get("/hero", (req, res, next) => {
   HeroModel.find({})
@@ -36,6 +36,6 @@ app.get("/hero/:slug", (req, res, next) => {
     });
 });
 
-app.listen(port, () => {
+app.listen(port || 80, () => {
   console.log("listen my port", port);
 });
