@@ -6,7 +6,7 @@ app.use(cors());
 app.use(express.json());
 
 const mongoose = require("mongoose");
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.lknx0gy.mongodb.net/?retryWrites=true&w=majority`);
+mongoose.connect(`${process.env.DATABASE_URL}`);
 const HeroModel = require("./model/characters");
 
 
