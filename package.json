@@ -6,7 +6,22 @@
     "mongoose": "^6.5.0",
     "nodemon": "^2.0.19"
   },
-  "scripts":{
-    "start":"node index.js"
-  }
+  "scripts": {
+    "start": "node index.js"
+  },
+  "name": "dc-comics-back",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelmpy/DC-Comics-Back.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joelmpy/DC-Comics-Back/issues"
+  },
+  "homepage": "https://github.com/joelmpy/DC-Comics-Back#readme",
+  "description": ""
 }
